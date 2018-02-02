@@ -1,0 +1,11 @@
+#!/bin/bash
+
+
+main(){
+    for region in $(./get-all-regions); do
+        echo "-------region $region -------"
+        ./find-open-ssh-sg "$region"
+    done
+}
+
+main
